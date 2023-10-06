@@ -1,20 +1,14 @@
+import { useTranslations } from 'next-intl';
 import * as React from 'react';
-import { FormattedMessage } from 'react-intl';
 
 interface Props {
   id: string;
-  strongClassName?: string;
 }
 
-const RichTextFormattedMessage = (props: Props) => (
-  <FormattedMessage
-    id={props.id}
-    values={{
-      b: (chunks) => (
-        <strong className={props.strongClassName}>{chunks}</strong>
-      ),
-    }}
-  />
-);
+const RichTextFormattedMessage = (props: Props) => {
+  const t = useTranslations();
+
+  return <span>{t(props.id)}</span>;
+};
 
 export default RichTextFormattedMessage;
