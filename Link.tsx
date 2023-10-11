@@ -1,9 +1,10 @@
+import NextLink from 'next/link';
 import * as React from 'react';
 
 const Default = (props: React.HTMLProps<HTMLAnchorElement>) => (
   <a
     href={props.href}
-    className={`${props.className} font-medium text-brand cursor-pointer hover:underline`}
+    className={`${props.className} font-medium text-inherit cursor-pointer hover:underline`}
     itemScope={props.itemScope}
     itemType={props.itemType}
     itemProp={props.itemProp}
@@ -12,6 +13,20 @@ const Default = (props: React.HTMLProps<HTMLAnchorElement>) => (
   >
     {props.children}
   </a>
+);
+
+const Next = (props: React.HTMLProps<HTMLAnchorElement>) => (
+  <NextLink
+    href={props.href ?? ''}
+    className={`${props.className} font-medium text-inherit cursor-pointer hover:underline`}
+    itemScope={props.itemScope}
+    itemType={props.itemType}
+    itemProp={props.itemProp}
+    target={props.target}
+    onClick={props.onClick}
+  >
+    {props.children}
+  </NextLink>
 );
 
 const Button = (props: React.HTMLProps<HTMLAnchorElement>) => (
@@ -31,7 +46,7 @@ const Button = (props: React.HTMLProps<HTMLAnchorElement>) => (
 const Paragraph = (props: React.HTMLProps<HTMLAnchorElement>) => (
   <a
     href={props.href}
-    className={`${props.className} font-medium text-brand cursor-pointer underline hover:no-underline`}
+    className={`${props.className} font-medium text-inherit cursor-pointer underline hover:no-underline`}
     itemScope={props.itemScope}
     itemType={props.itemType}
     itemProp={props.itemProp}
@@ -45,7 +60,7 @@ const Paragraph = (props: React.HTMLProps<HTMLAnchorElement>) => (
 const IconLink = (props: React.HTMLProps<HTMLAnchorElement>) => (
   <a
     href={props.href}
-    className={`${props.className} inline-flex items-center font-medium text-brand hover:underline`}
+    className={`${props.className} inline-flex items-center font-medium text-inherit hover:underline`}
     itemScope={props.itemScope}
     itemType={props.itemType}
     itemProp={props.itemProp}
@@ -60,5 +75,6 @@ export default {
   Button,
   Default,
   IconLink,
+  Next,
   Paragraph,
 };
