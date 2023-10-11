@@ -4,7 +4,7 @@ import Button from './Button';
 interface Props {
   onClick: () => void;
   disabled?: boolean;
-  children: JSX.Element | JSX.Element[] | string;
+  children: React.ReactNode;
   transparent?: boolean;
   className?: string;
 }
