@@ -3,7 +3,7 @@ import Container from './Container';
 
 const BlankPage = (props: React.HTMLProps<HTMLDivElement>) => {
   return (
-    <div className={`${props.className} w-screen min-h-screen`}>
+    <div className={`${props.className} w-screen min-h-screen mb-8`}>
       {props.children}
     </div>
   );
