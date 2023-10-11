@@ -16,7 +16,7 @@ const Cta = (props: Props) => {
 
   return (
     <Button.Primary
-      className={`${props.className} text-xl h-fit px-24 py-4 w-full`}
+      className={`${props.className} text-xl w-auto h-fit px-24 py-4`}
       style={style}
       disabled={props.disabled}
       onClick={props.onClick}
@@ -29,7 +29,7 @@ const Cta = (props: Props) => {
 export const Alternative = (props: Props) => {
   return (
     <Button.Alternative
-      className={`${props.className} text-lg h-fit px-24 py-4 w-full`}
+      className={`${props.className} text-lg h-fit px-24 py-4`}
       disabled={props.disabled}
       onClick={props.onClick}
     >
