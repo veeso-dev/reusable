@@ -33,8 +33,20 @@ const Tertiary = (props: React.HTMLProps<HTMLButtonElement>) => (
   </button>
 );
 
+const Icon = (props: React.HTMLProps<HTMLButtonElement>) => (
+  <button
+    type={'button'}
+    className={`${props.className} h-fit text-white bg-brand hover:bg-brandAlt focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-full text-sm p-2.5 text-center inline-flex items-center mr-2 disabled:cursor-not-allowed`}
+    disabled={props.disabled}
+    onClick={props.onClick}
+  >
+    {props.children}
+  </button>
+);
+
 export default {
   Primary,
   Alternative,
+  Icon,
   Tertiary,
 };
