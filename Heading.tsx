@@ -5,7 +5,7 @@ const H1 = (props: React.HTMLProps<HTMLHeadingElement>) => (
     itemProp={props.itemProp}
     itemScope={props.itemScope}
     itemType={props.itemType}
-    className={`${props.className} py-4 text-2xl text-center text-brand tracking-wide font-normal leading-10`}
+    className={`${props.className} py-4 text-2xl text-center text-brand tracking-wide font-normal`}
   >
     {props.children}
   </h1>
@@ -16,7 +16,7 @@ const H2 = (props: React.HTMLProps<HTMLHeadingElement>) => (
     itemProp={props.itemProp}
     itemScope={props.itemScope}
     itemType={props.itemType}
-    className={`${props.className} py-3 text-xl text-left text-brand font-normal leading-2`}
+    className={`${props.className} py-3 text-xl text-left text-brand font-normal`}
   >
     {props.children}
   </h2>
