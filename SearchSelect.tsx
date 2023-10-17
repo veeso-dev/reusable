@@ -4,6 +4,7 @@ import Button from './Button';
 
 interface Props {
   disabled?: boolean;
+  className?: string;
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   onSelect: (key: string, value: string) => void;
   placeholder: string;
@@ -32,7 +33,7 @@ const SearchSelect = (props: Props) => {
   ));
 
   return (
-    <div className="relative">
+    <div className={`${props.className} relative`}>
       <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
         <svg
           className="w-4 h-4 text-brand"
@@ -60,7 +61,7 @@ const SearchSelect = (props: Props) => {
         required
       />
       {results && (
-        <Container.FlexCols className="absolute bg-white text-text w-full rounded-lg">
+        <Container.FlexCols className="absolute bg-white text-text w-full rounded-lg z-10">
           {results}
         </Container.FlexCols>
       )}
