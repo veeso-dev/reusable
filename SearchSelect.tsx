@@ -1,6 +1,5 @@
 import * as React from 'react';
 import Container from './Container';
-import Button from './Button';
 
 interface Props {
   disabled?: boolean;
