@@ -32,7 +32,7 @@ const Next = (props: React.HTMLProps<HTMLAnchorElement>) => (
 const Button = (props: React.HTMLProps<HTMLAnchorElement>) => (
   <a
     href={props.href}
-    className={`${props.className} font-medium bg-brand text-white hover:underline focus:ring-4 focus:ring-brand rounded-full`}
+    className={`${props.className} font-medium bg-brand hover:bg-brandAlt focus:outline-none focus:ring-4 focus:ring-gray-300 rounded-xl`}
     itemScope={props.itemScope}
     itemType={props.itemType}
     itemProp={props.itemProp}
