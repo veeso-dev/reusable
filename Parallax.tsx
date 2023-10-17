@@ -1,5 +1,4 @@
 import * as React from 'react';
-import LazyLoad from 'react-lazyload';
 
 interface Props extends React.HTMLProps<HTMLDivElement> {
   height: string;
@@ -17,14 +16,12 @@ const Parallax = (props: Props) => {
 
   return (
     <div className={`${props.className} h-auto w-full relative`}>
-      <LazyLoad className="lazyload-wrapper--parallax">
-        <div
-          className="overflow-hidden bg-fixed bg-center bg-no-repeat bg-cover"
-          style={parallaxStyle}
-        >
-          {props.children}
-        </div>
-      </LazyLoad>
+      <div
+        className="overflow-hidden bg-fixed bg-center bg-no-repeat bg-cover"
+        style={parallaxStyle}
+      >
+        {props.children}
+      </div>
     </div>
   );
 };
